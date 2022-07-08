@@ -2,9 +2,8 @@
 ![image](https://user-images.githubusercontent.com/108604868/177925956-aa47bf00-eef5-4dab-999b-7784b58b8441.png)
 
 
-In this exercise
+In this exercise, we implement the vehicle counting problem by mainly referring to [1]. We first transform each frame from RGB domain to grayscale. With the aid of gaussian blur, the frame can be smooth than before, which curbs the noise. Then, we employ gaussian mixture-based background/foreground segmentation algorithm to achieve the detection of non-stationary object and its shadow. Through morphology, we can readily filter the apparent noise by applying dilation. Next, we identify the contours made by the successive pixel points. Once the center of contour pass the detecting line, we can count the vehicle on the highway. Therefore, the counting problem in the case of vehicles on the highway is resolved by a simple geometric method.
 
-在本程式中，我們主要參考[1] 的方法，首先針對每一幀將其從RGB轉到灰階，利用高斯模糊平滑圖片，以此去除雜訊，接著利用基於混合高斯分佈 [2] 做運動物體偵測與其shadow偵測，透過形態學膨脹與侵蝕，將顯著的雜點消除。偵測多點像素所連接的輪廓，設置一條偵測線，當輪廓中心通過偵測線，則代表有物件通過，因此就能實現利用幾何方法的counting problem。
 
 
 
