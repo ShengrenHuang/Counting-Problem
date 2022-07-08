@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/108604868/177925956-aa47bf00-eef5-4dab-999b-7784b58b8441.png)
 
 
-In this exercise, we solve the vehicle counting problem by mainly referring to [1]. We first transform each frame from the RGB domain to grayscale. With the aid of gaussian blur, the frame can be smoother than before, which curbs the noise. Then, we employ a gaussian mixture-based background/foreground segmentation algorithm to achieve the detection of the non-stationary object and its shadow. Through morphology, we can readily filter the apparent noise by applying dilation. Next, we identify the contours made by the successive pixel points. Once the centers of the contours pass the detecting line, we can count the number of vehicles on the highway. Therefore, the counting problem in the case of vehicles on the highway is solved by a simple geometric method.
+In this exercise, we solve the vehicle counting problem by mainly referring to [1]. We first transform each frame from the RGB domain to grayscale. With the aid of gaussian blur, we can make the frame smoother than before, which curbs the noise. Then, we employ a gaussian mixture-based background/foreground segmentation algorithm to achieve the detection of the non-stationary object and its shadow. Through morphology, we can readily filter the apparent noise by applying dilation. Next, we identify the contours made by the successive pixel points. Once the centers of the contours pass the detecting line, we can count the number of vehicles on the highway. Therefore, the counting problem in the case of vehicles on the highway is solved by a simple geometric method.
 
 
 # Reference
